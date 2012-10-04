@@ -7,6 +7,8 @@ dbg = (msg) ->
 strip = (text) ->
     if text isnt undefined
         text.replace(/^\s+|\s+/g, "")
+    else
+        text
 
 GetBlocks = (text) ->
     blocks = text.match(/(\[[a-z0-9=_]*?)\[(.*?)\](.*?\])/g)
@@ -202,11 +204,13 @@ MdToHtml = (raw) ->
         dbg("Markdown convertion error #{error}")
         return raw
 
+# Everything below this line should be abstracted out to the main page or a different script. Everything above should probably be moved into a class
+# Eventually I want to clean this up into a node module
+
 UpdateModel = (model) ->
     element = document.getElementById("t1")
     tangle = new Tangle(element,model)
 
-# Everything below this line should be abstracted out to the main page or a different script. Everything above should probably be moved into a class
 RunParse = ->
     raw = "\n" + $("#input").val()
     r = ParseReactive(raw)
