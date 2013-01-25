@@ -38,7 +38,7 @@
     <!-- Some local interaction -->
     <script type="text/javascript">
     var LoadExample, ex1, ex2;
-    ex1 = "#### Variable\n[p0=5000[]]\nHis power level is [l1[p0]].\n\n#### Number Box\nHis power level is [p1=5000[_]]. That's [how_much_1[p1 - 3000]] more than 3000.\n\n#### Adjustable Number\nHis power level is [p2[5000..10000,1000]]. That's [how_much_2[p2 - 3000]] than 3000.\n\n#### Toggle\nHis power level is [p3=0[0,1]less than 9000.,OVER 9000!!!]\n\n#### Resultant\nHis power level is [p4=5000[5000..10000,1000]]. If your power level is 3000 his is [your_level[100 * (p4 / 3000)]%0.0f]% more!\n\n#### If\nHis power level is [p5=5000[5000..20000,1000]].[warning_1[p5 > 9000] IT'S OVER 9000!!!]\n\n#### Switch\nHis power level is [p6=5000[5000..20000,1000]]. It's [warning_2[(p6 < 8000),(p6 < 9000),(p6 > 9000)]low.,almost 9000?!,OVER 9000!!!]";
+    ex1 = "#### Variable\n[p0=5000[]]\nHis power level is [l1[p0]].\n\n#### Number Box\nHis power level is [p1=5000[_]]. That's [how_much_1[p1 - 3000]] more than 3000.\n\n#### Adjustable Number\nHis power level is [p2[5000..10000,1000]]. That's [how_much_2[p2 - 3000]] than 3000.\n\n#### Toggle\nHis power level is [p3=0[0,1]less than 9000.,OVER 9000!!!]\n\n#### Resultant\nHis power level is [p4=5000[5000..10000,1000]]. If your power level is 3000 his is [your_level[100 * (p4 / 3000)]%0.0f]% more!\n\n#### If\nHis power level is [p5=5000[5000..20000,1000]].[warning_1[p5 > 9000] IT'S OVER 9000!!!]\n\n#### Switch\nHis power level is [p6=5000[5000..20000,1000]]. It's [warning_2[(p6 < 8000),(p6 <= 9000),(p6 > 9000)]low.,almost 9000?!,OVER 9000!!!]";
     ex2 = " ";
     LoadExample = function(n) {
       if (n === 0) {
@@ -159,7 +159,7 @@
               <tr>
                 <td>Switch</td>
                 <td>[variable_name[condition_1,condition_2,...]text_1,text_2,...]</td>
-                <td>His power level is [power_level=5000[5000..10000,1000]]. It's [warning[(power_level < 8000),(power_level < 9000),(power_level>9000)]low,almost 9000?!,OVER 9000!!!].</td>
+                <td>His power level is [power_level=5000[5000..10000,1000]]. It's [warning[(power_level < 8000),(power_level <= 9000),(power_level>9000)]low,almost 9000?!,OVER 9000!!!].</td>
               </tr>
             </tbody>
           </table>
