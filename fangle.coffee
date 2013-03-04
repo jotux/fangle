@@ -13,10 +13,10 @@ GetBlocks = (text) ->
     if blocks is null
         return null
     len = blocks.length - 1
-    starts = (text.indexOf(blocks[b],0) for b in [0..len])
-    lengths = (blocks[b].length for b in [0..len])
-    ends = (starts[b] + lengths[b] for b in [0..len])
-    {blocks,starts,ends}
+    dbg("    Blocks found: " + len)
+    index = (text.indexOf(blocks[b],0) for b in [0..len])
+    size = (blocks[b].length for b in [0..len])
+    {blocks,index,size}
 
 ParseReactive = (raw) ->
     try
