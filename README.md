@@ -1,6 +1,6 @@
 ## Demo website
 
-[Clicky](http://jotux.github.com/fangle/)
+[Clicky](http://jotux.github.io/fangle/)
 
 ## Why?
 
